@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục trang web Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Đầu trang -->
+        <div class="header">
+            <h1>Header / Navigation</h1>
+        </div>
+
+        <!-- Cột bên trái (Sidebar Trái / Menu) -->
+        <div class="sidebar-left">
+            <h3>Sidebar Left</h3>
+            <ul>
+                <li><a href="#">Mục 1</a></li>
+                <li><a href="#">Mục 2</a></li>
+                <li><a href="#">Mục 3</a></li>
+            </ul>
+        </div>
+
+        <!-- Khối nội dung chính ở giữa -->
+        <div class="main-content">
+            <h2>Main Content</h2>
+            <p>
+                Đây là khu vực hiển thị nội dung chính của trang web. Khi xem trên màn hình lớn (Desktop), 
+                nội dung này sẽ nằm ở giữa hai thanh Sidebar. Khi chuyển sang màn hình nhỏ (Mobile/Tablet), 
+                các khối sẽ tự động xếp chồng lên nhau một cách mượt mà nhờ CSS Media Queries.
+            </p>
+        </div>
+
+        <!-- Cột bên phải (Sidebar Phải / Quảng cáo / Tin tức) -->
+        <div class="sidebar-right">
+            <h3>Sidebar Right</h3>
+            <p>Thông tin phụ hoặc liên kết bổ sung.</p>
+        </div>
+
+        <!-- Chân trang -->
+        <div class="footer">
+            <p>Footer &copy; 2026. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>

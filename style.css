@@ -1,0 +1,114 @@
+/* Reset CSS chuẩn */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+/* Khối bao ngoài sử dụng CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mặc định trên Mobile: 1 cột duy nhất */
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Định dạng chung cho các khối */
+.header, .sidebar-left, .main-content, .sidebar-right, .footer {
+    padding: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Màu sắc từng phân vùng */
+.header {
+    background-color: #8bc34a; /* Xanh lá */
+}
+
+.sidebar-left {
+    background-color: #fff9c4; /* Vàng nhạt */
+    color: #333333;
+    text-align: left;
+}
+
+.main-content {
+    background-color: #757575; /* Xám */
+    text-align: left;
+    min-height: 250px;
+}
+
+.sidebar-right {
+    background-color: #fff9c4; /* Vàng nhạt */
+    color: #333333;
+    text-align: left;
+}
+
+.footer {
+    background-color: #8bc34a; /* Xanh lá */
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVE DESIGN (Media Queries)                  */
+/* -------------------------------------------------- */
+
+/* 1. Màn hình Tablet (Độ rộng từ 600px trở lên) */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .header {
+        grid-column: span 2;
+    }
+
+    .sidebar-left {
+        grid-column: 1 / 2;
+    }
+
+    .main-content {
+        grid-column: 2 / 3;
+    }
+
+    .sidebar-right {
+        grid-column: span 2;
+    }
+
+    .footer {
+        grid-column: span 2;
+    }
+}
+
+/* 2. Màn hình Desktop (Độ rộng từ 900px trở lên) */
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: 200px 1fr 200px; /* 3 Cột: Sidebar Trái - Nội dung chính - Sidebar Phải */
+    }
+
+    .header {
+        grid-column: span 3;
+    }
+
+    .sidebar-left {
+        grid-column: 1 / 2;
+    }
+
+    .main-content {
+        grid-column: 2 / 3;
+    }
+
+    .sidebar-right {
+        grid-column: 3 / 4;
+    }
+
+    .footer {
+        grid-column: span 3;
+    }
+}
